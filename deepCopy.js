@@ -6,7 +6,7 @@ function deepCopy(obj)
 function deepCopyArray(arr)
 {
 	let temp = [];
-	for(i of arr)
+	for(let i of arr)
 	{
 		(typeof i === 'object') ? temp.push(deepCopy(i)) : temp.push(i);
 	}
@@ -16,7 +16,7 @@ function deepCopyArray(arr)
 function deepCopyObject(obj)
 {
 	let temp = {};
-	for(i of Object.entries(obj))
+	for(let i of Object.entries(obj))
 	{
 		(typeof i[1] === 'object') ? temp[i[0]] = deepCopy(i[1]) : temp[i[0]] = i[1];
 	}
